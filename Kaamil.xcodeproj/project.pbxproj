@@ -15,6 +15,10 @@
 		7634869E2B92235500BF10A9 /* KaamilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7634869D2B92235500BF10A9 /* KaamilTests.swift */; };
 		763486A82B92235500BF10A9 /* KaamilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763486A72B92235500BF10A9 /* KaamilUITests.swift */; };
 		763486AA2B92235500BF10A9 /* KaamilUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763486A92B92235500BF10A9 /* KaamilUITestsLaunchTests.swift */; };
+		763486B82B92281B00BF10A9 /* KaamilAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 763486B62B92281B00BF10A9 /* KaamilAppModel.xcdatamodeld */; };
+		763486BE2B922A5A00BF10A9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763486BD2B922A5A00BF10A9 /* CoreDataStack.swift */; };
+		763486C22B922B5600BF10A9 /* GroupCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763486C12B922B5600BF10A9 /* GroupCreationView.swift */; };
+		763486C62B922F5C00BF10A9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763486C52B922F5C00BF10A9 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		763486A32B92235500BF10A9 /* KaamilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaamilUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		763486A72B92235500BF10A9 /* KaamilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaamilUITests.swift; sourceTree = "<group>"; };
 		763486A92B92235500BF10A9 /* KaamilUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaamilUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		763486B72B92281B00BF10A9 /* KaamilAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KaamilAppModel.xcdatamodel; sourceTree = "<group>"; };
+		763486BD2B922A5A00BF10A9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		763486C12B922B5600BF10A9 /* GroupCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCreationView.swift; sourceTree = "<group>"; };
+		763486C52B922F5C00BF10A9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				7634868F2B92235500BF10A9 /* Assets.xcassets */,
 				763486912B92235500BF10A9 /* Kaamil.entitlements */,
 				763486922B92235500BF10A9 /* Preview Content */,
+				763486B62B92281B00BF10A9 /* KaamilAppModel.xcdatamodeld */,
+				763486BD2B922A5A00BF10A9 /* CoreDataStack.swift */,
+				763486C12B922B5600BF10A9 /* GroupCreationView.swift */,
+				763486C52B922F5C00BF10A9 /* HomeView.swift */,
 			);
 			path = Kaamil;
 			sourceTree = "<group>";
@@ -262,9 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				763486B82B92281B00BF10A9 /* KaamilAppModel.xcdatamodeld in Sources */,
+				763486C62B922F5C00BF10A9 /* HomeView.swift in Sources */,
 				7634868C2B92235300BF10A9 /* ContentView.swift in Sources */,
 				7634868E2B92235300BF10A9 /* Item.swift in Sources */,
+				763486BE2B922A5A00BF10A9 /* CoreDataStack.swift in Sources */,
 				7634868A2B92235300BF10A9 /* KaamilApp.swift in Sources */,
+				763486C22B922B5600BF10A9 /* GroupCreationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +637,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		763486B62B92281B00BF10A9 /* KaamilAppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				763486B72B92281B00BF10A9 /* KaamilAppModel.xcdatamodel */,
+			);
+			currentVersion = 763486B72B92281B00BF10A9 /* KaamilAppModel.xcdatamodel */;
+			path = KaamilAppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7634867E2B92235200BF10A9 /* Project object */;
 }

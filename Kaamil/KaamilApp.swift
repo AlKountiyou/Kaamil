@@ -6,27 +6,30 @@
 //
 
 import SwiftUI
-import SwiftData
+import CoreData // Importer CoreData ici
 
 @main
 struct KaamilApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
-        .modelContainer(sharedModelContainer)
+    }
+}
+
+class PersistenceController {
+    static let shared = PersistenceController()
+
+    let container: NSPersistentContainer
+
+    init() {
+        container = NSPersistentContainer(name: "KaamilAppModel") // Remplacer "KaamilAppModel" par le nom de votre modèle CoreData
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
     }
 }
